@@ -1,0 +1,25 @@
+h1{
+    color: rgb(6, 8, 114);
+    padding-left: 450px;
+    background-color: aqua;
+
+ 
+}
+form{
+    background-color: blanchedalmond;
+    padding: 100px;
+    margin: 10px;
+    height: 100px;
+}
+.full-form{
+    border: 2px solid darkslategray;
+  
+}
+.all-div{padding-top: 1px;
+   margin: 10px;
+   color: brown;
+
+}
+button{
+    color: blueviolet;
+}
