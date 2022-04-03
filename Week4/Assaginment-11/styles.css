@@ -1,0 +1,43 @@
+
+        .container{
+            height: 700px;
+            width: 800px;
+            border:1px solid rgb(4, 53, 27);
+            background-color: rgb(11, 122, 76);
+            margin-left: 300px;
+            margin-top: 100px;
+        }
+        .item1{
+            border-bottom: 200px solid rgb(224, 212, 172);
+            border-left: 180PX solid transparent;
+            border-right: 180PX solid transparent;
+            width: 0PX;
+            position: relative;
+            top: 155px;
+            left: 230px;
+            z-index: 99999;
+
+        }
+        .item2{
+            border-bottom: 200px solid rgb(206, 169, 48);
+            border-left: 180PX solid transparent;
+            border-right: 180PX solid transparent;
+            width: 0PX;
+            position: relative;
+            top: 21px;
+            left: 230px;
+            z-index: 9999;
+
+        }
+        .item3{
+            border-bottom: 200px solid rgb(9, 64, 88);
+            border-left: 180PX solid transparent;
+            border-right: 180PX solid transparent;
+            width: 0PX;
+            position: relative;
+            top: -115px;
+            left: 230px;
+            z-index: 999;
+
+        }
+  

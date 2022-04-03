@@ -1,0 +1,43 @@
+
+  
+
+
+.container{
+    height: 800px;
+    width: 1000px;
+   border: 5px solid rgb(236, 156, 156);
+   margin-left: 300px;
+ 
+   background-image: url(https://media.istockphoto.com/photos/blue-background-picture-id157571423?k=20&m=157571423&s=612x612&w=0&h=GxSD_uRBNlBtsvXo54kGstPong-zzqKR545fF1Y5Mws=);
+}
+
+
+.item{
+   height: 520px;
+    width: 400px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(204, 147, 147);
+    margin: 400px;
+    margin-top: 100px;
+    position: relative;
+ top: -36px;
+ left: -11px;
+ border-radius: 10px;
+    
+}
+
+    a :visited{
+        color: rgb(11, 11, 223);
+    }
+    p{
+        position: relative;
+        top: -3px;
+        left: 20px;
+        
+    }
+   .alter{
+    position: relative;
+    top: -40px;
+    left: 196px;
+   }
+

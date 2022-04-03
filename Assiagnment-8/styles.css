@@ -1,0 +1,35 @@
+div{
+border:2px solid black;
+height: 600px;
+width: 600px;
+background-color: antiquewhite;
+
+
+
+}
+.button{
+    margin-top: 150px;
+    margin-left: 80px;
+    color:red;
+}
+ 
+h1{
+
+    text-align: center;
+    color: blueviolet;
+
+}
+.mail{
+    margin-left: 50px;
+    color:red;
+}
+.password{
+
+    margin-left: 50px;
+    color:red;
+}
+.name{
+
+    margin-left: 50px;
+    color:red;
+}
