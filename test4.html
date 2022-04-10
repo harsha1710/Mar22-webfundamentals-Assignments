@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msd{
+            border: 2px solid black;
+            width: 500px;
+            background-color: rgb(194, 58, 133);
+        }
+    </style>
+    
+ 
+</head>
+<body > 
+    <div class="msd">
+        <form  name="bk">
+            Enter the value of A <input type="text" name="first"><br>
+            
+            Enter the value of B <input type="text" name="second"><br>
+            <input type="button" value="click to swap" onclick="swap()"><br>
+    
+        </form>
+        <script>
+           function swap(){
+            var A,B,C
+            A=document.bk.first.value
+            B=document.bk.second.value
+            document.write(" number"+A)
+            document.write("<br>")
+            document.write("number"+B)
+            document.write("<br>")
+            C=A
+            A=B
+            B=C
+            document.write("Swapped number"+A)
+            document.write("<br>")
+            document.write("Swapped number"+B)
+           }
+            
+        
+    
+        </script>
+    </div>
+   
+</body>
+</html>
