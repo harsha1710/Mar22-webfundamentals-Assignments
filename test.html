@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <head>
+            <label for="inp1">Enter Id: </label>
+            <input type="text" id="inp1" name="inp1" placeholder="Enter id" />
+            <input type="button" id="btn" value="Enter" onclick="myFunction()">
+
+
+            <div id="Fname" name="Fname"></div>
+            <div id="Lname" ></div>
+            <div id="emailId"></div>
+            <div id="image">
+                <img src="" alt="" id="img1" height="300vh">
+            </div>
+        </head>
+    </div>
+    <script>
+        function myFunction() {
+            var ids = document.getElementById("inp1").value;
+            console.log(ids);
+            var flag = 0;
+            const userList = [{ "id": 1, "email": "richard.andrew@feges.in", "first_name": "Richard", "last_name": "andrew", "avatar": "https://reqres.in/img/faces/1-image.jpg" }, { "id": 2, "email": "janet.weaver@reqres.in", "first_name": "Janet", "last_name": "Weaver", "avatar": "https://reqres.in/img/faces/2-image.jpg" }, { "id": 3, "email": "emma.wong@reqres.in", "first_name": "Emma", "last_name": "Wong", "avatar": "https://reqres.in/img/faces/3-image.jpg" }, { "id": 4, "email": "eve.holt@reqres.in", "first_name": "Eve", "last_name": "Holt", "avatar": "https://reqres.in/img/faces/4-image.jpg" }, { "id": 5, "email": "charles.morris@reqres.in", "first_name": "Charles", "last_name": "Morris", "avatar": "https://reqres.in/img/faces/5-image.jpg" }, { "id": 6, "email": "tracey.ramos@reqres.in", "first_name": "Tracey", "last_name": "Ramos", "avatar": "https://reqres.in/img/faces/6-image.jpg" }];
+            for (let i = 1; i < userList.length; i++) {
+                if (ids == i) {
+
+                    document.getElementById("Fname").innerText = userList[i].first_name;
+                    document.getElementById("Lname").innerText = userList[i].last_name;
+                    document.getElementById("emailId").innerText = userList[i].email;
+                    document.getElementById("img1").src = userList[i].avatar;
+                    flag = 1;
+                    break;
+
+                }
+            } if (flag == 0) {
+                alert("Please enter valid id");
+                document.getElementById("inp1").value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
