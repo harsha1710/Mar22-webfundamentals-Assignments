@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       
+#container{
+    border: 6px solid black;
+    height: 500px;
+     width: 700px;
+      align-content: center;
+      margin-left: 500px; 
+      margin-top: 100px;  
+}
+.btn{
+    
+    height: 60px;
+    width: 500px;
+    margin-left: 600px;
+    margin-top: 50px;
+}
+#prev{
+    height: 40px;
+    width: 100px;
+    float: left;
+}
+#next{
+    height: 40px;
+    width: 100px;
+    float: right;
+}
+#photo{
+    border: 2px solid black;
+    height: 250px;
+    width: 250px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 230px;
+
+}
+#names{
+   
+    height: 150px;
+    width: 700px;
+    margin-top: 320px;
+    align-content: center;
+}
+#name{
+    text-align: center;
+    margin-top: 20px;
+    
+    font-size: 30px;
+    color: green;
+}
+#email{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: red;
+}
+
+    h1 {
+        color: blue;
+        text-align: center;
+    }
+
+   </style>
+</head>
+<body>
+    <div id="container" >
+        <div id="header">
+            <h1>Visiting card </h1>
+        </div>
+        <div id="photo">
+            <img src="" alt="" id="img" height="250px" width="250px">
+        </div>
+        <div id="names">
+            <div id="name" ></div>
+            <div id="email"></div>
+        </div>
+       
+    </div>
+    <div id="btn" class="btn">
+        
+            <button id="prev" onclick="prevFun()" value="prev">Prev</button>        
+            <button id="next" onclick="nextFun()" value="next">Next</button>
+            
+    </div>
+    
+
+
+    
+    <script >
+        var url="https://reqres.in/api/users?page=2";
+const response = await fetch(url);
+var dataObj = await response.json();
+let index=0;
+window.onload=function(){
+    update(index);
+}
+function prevFun(){
+    if(index==0){
+        index=dataObj.data.length-1;
+    }else{
+        index--;
+    }
+    update(index);
+}
+function nextFun(){
+    if(index===dataObj.data.length-1){
+        index=0;
+    }else{
+        index++;
+    }
+    update(index);
+}
+function update(index){       
+    document.getElementById("name").innerText=dataObj.data[index].first_name+" "+dataObj.data[index].last_name;
+    document.getElementById("email").innerText=dataObj.data[index].email;
+    document.getElementById("img").src=dataObj.data[index].avatar;       
+}
+    </script>
+</body>
+</html>
